@@ -1,25 +1,199 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3gd-eR-jrK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Daftar_Antrian_Barang" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nama barang" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="kfa-Wp-wix">
+                                <rect key="frame" x="20" y="98" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nama Barang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPZ-gL-0tm">
+                                <rect key="frame" x="20" y="69" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jumlah Barang" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-0J-keJ">
+                                <rect key="frame" x="20" y="151" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Jumlah barang" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="995-Cy-oYj">
+                                <rect key="frame" x="20" y="180" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplikasi Sederhana Antrian Barang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7l-el-jdO">
+                                <rect key="frame" x="28" y="483" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" restorationIdentifier="cellBarang" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YaS-7M-Hik">
+                                <rect key="frame" x="14" y="262" width="292" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellBarang" textLabel="EbP-bt-KJ8" detailTextLabel="DsA-a2-dJf" style="IBUITableViewCellStyleSubtitle" id="2u0-O6-mn7">
+                                        <rect key="frame" x="0.0" y="28" width="292" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2u0-O6-mn7" id="UPP-Tw-ti8">
+                                            <rect key="frame" x="0.0" y="0.0" width="292" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EbP-bt-KJ8">
+                                                    <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" tag="2" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DsA-a2-dJf">
+                                                    <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Tm4-wf-VZU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Bdp-66-Zi9"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHF-zJ-FUb">
+                                <rect key="frame" x="106" y="224" width="108" height="30"/>
+                                <state key="normal" title="Tambah Antrian"/>
+                                <connections>
+                                    <action selector="tambahBarangButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNZ-bG-LgQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="n7l-el-jdO" secondAttribute="trailing" constant="8" id="5Si-cC-3fa"/>
+                            <constraint firstItem="n7l-el-jdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="5sn-MN-Y9W"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kfa-Wp-wix" secondAttribute="leading" id="7Ey-MH-nc2"/>
+                            <constraint firstItem="wDS-0J-keJ" firstAttribute="leading" secondItem="995-Cy-oYj" secondAttribute="leading" id="7uj-HP-i0D"/>
+                            <constraint firstItem="wDS-0J-keJ" firstAttribute="top" secondItem="kfa-Wp-wix" secondAttribute="bottom" constant="23" id="ATC-hh-Wi7"/>
+                            <constraint firstItem="kfa-Wp-wix" firstAttribute="top" secondItem="cPZ-gL-0tm" secondAttribute="bottom" constant="8" id="CLa-MN-aig"/>
+                            <constraint firstItem="IHF-zJ-FUb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gsa-BR-Mhu"/>
+                            <constraint firstItem="YaS-7M-Hik" firstAttribute="top" secondItem="995-Cy-oYj" secondAttribute="bottom" constant="52" id="L7M-MR-9p2"/>
+                            <constraint firstItem="n7l-el-jdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MGk-mS-Qjg"/>
+                            <constraint firstItem="n7l-el-jdO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OV7-f1-prl"/>
+                            <constraint firstAttribute="trailing" secondItem="YaS-7M-Hik" secondAttribute="trailing" id="Rbq-hn-g2E"/>
+                            <constraint firstItem="YaS-7M-Hik" firstAttribute="top" secondItem="IHF-zJ-FUb" secondAttribute="bottom" constant="8" id="U52-d0-OaQ"/>
+                            <constraint firstItem="cPZ-gL-0tm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="XnC-VY-HCt"/>
+                            <constraint firstItem="995-Cy-oYj" firstAttribute="top" secondItem="wDS-0J-keJ" secondAttribute="bottom" constant="8" id="aPI-0p-Aqu"/>
+                            <constraint firstItem="YaS-7M-Hik" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d27-pK-gk5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="995-Cy-oYj" secondAttribute="leading" id="dQg-tA-PkO"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cPZ-gL-0tm" secondAttribute="leading" id="e3f-q9-KMR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n7l-el-jdO" secondAttribute="bottom" constant="15" id="euo-wk-dSl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n7l-el-jdO" secondAttribute="bottom" constant="15" id="i5t-yk-1D5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n7l-el-jdO" secondAttribute="trailing" id="oy8-9H-saY"/>
+                            <constraint firstItem="IHF-zJ-FUb" firstAttribute="top" secondItem="995-Cy-oYj" secondAttribute="bottom" constant="14" id="rmZ-9p-7qY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n7l-el-jdO" secondAttribute="bottom" constant="15" id="s5n-JN-yDR"/>
+                            <constraint firstAttribute="trailing" secondItem="n7l-el-jdO" secondAttribute="trailing" id="tFB-3a-Gri"/>
+                            <constraint firstItem="n7l-el-jdO" firstAttribute="top" secondItem="YaS-7M-Hik" secondAttribute="bottom" constant="16" id="ykc-Cz-1Ct"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5Si-cC-3fa"/>
+                                <exclude reference="5sn-MN-Y9W"/>
+                                <exclude reference="MGk-mS-Qjg"/>
+                                <exclude reference="oy8-9H-saY"/>
+                                <exclude reference="tFB-3a-Gri"/>
+                                <exclude reference="euo-wk-dSl"/>
+                                <exclude reference="i5t-yk-1D5"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="rZW-Rs-cyW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="antrianBarangTableView" destination="YaS-7M-Hik" id="2eY-bu-zkE"/>
+                        <outlet property="jumlahBarangText" destination="995-Cy-oYj" id="I31-D4-bZQ"/>
+                        <outlet property="namaBarangText" destination="kfa-Wp-wix" id="fnC-uW-Cw6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="837" y="381"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="5JV-qY-CL5">
+            <objects>
+                <viewController id="Cgw-7A-Y60" customClass="ViewController" customModule="Daftar_Antrian_Barang" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jct-We-IZb"/>
+                        <viewControllerLayoutGuide type="bottom" id="FuA-Ve-bdz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Nn-aj-oWt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aplikasi Sederhana Antrian Barang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcX-zv-yS4">
+                                <rect key="frame" x="28" y="483" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FuA-Ve-bdz" firstAttribute="top" secondItem="gcX-zv-yS4" secondAttribute="bottom" constant="15" id="bNM-J5-xFQ"/>
+                            <constraint firstItem="gcX-zv-yS4" firstAttribute="centerX" secondItem="1Nn-aj-oWt" secondAttribute="centerX" id="jku-Av-09E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gcX-zv-yS4" secondAttribute="trailing" constant="8" id="rg4-Gn-3wJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rg4-Gn-3wJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="DgB-ip-ggd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="832-Lh-CSB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="1126"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="leK-tl-52I">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3gd-eR-jrK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Ax-1W-ahv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="gri-NV-dIz"/>
+                        <segue destination="Cgw-7A-Y60" kind="relationship" relationship="viewControllers" id="RnF-dL-ME6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sQD-s6-Efg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="381"/>
         </scene>
     </scenes>
 </document>
